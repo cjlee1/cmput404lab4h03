@@ -4,7 +4,7 @@
 <h3>{{ error_message }}</h3>
 {% endif %}
 
-<form action="{% url 'vote' question.id %}" method="POST">
+<form action="{% url 'polls:vote' question.id %}" method="POST">
     {% csrf_token %}
 
     {% for choice in question.choice_set.all %}
